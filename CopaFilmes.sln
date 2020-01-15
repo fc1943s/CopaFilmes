@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{6761636F-ECBD-40DE-ADA3-9C6BF697CCA4}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CopaFilmes.Frontend", "CopaFilmes.Frontend\CopaFilmes.Frontend.fsproj", "{D083F3F3-34FB-4846-B718-D03B2C1526A8}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CopaFilmes.Backend", "CopaFilmes.Backend\CopaFilmes.Backend.fsproj", "{EE566AEA-3B5F-430E-8989-34F8DE0D5E98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70C01A2A-24A7-41AF-AE07-7113941D448B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CB0B9FD4-9FC1-4A52-BDC6-207B09F26F8C}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CopaFilmes.Shared", "CopaFilmes.Shared\CopaFilmes.Shared.fsproj", "{FA7ED0A1-733D-4DB5-8088-97A58D13CBE0}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CopaFilmes.Backend.Tests", "CopaFilmes.Backend.Tests\CopaFilmes.Backend.Tests.fsproj", "{D73F3962-3C8D-4FE2-85C9-C83FA5FE17E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D083F3F3-34FB-4846-B718-D03B2C1526A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D083F3F3-34FB-4846-B718-D03B2C1526A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D083F3F3-34FB-4846-B718-D03B2C1526A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D083F3F3-34FB-4846-B718-D03B2C1526A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE566AEA-3B5F-430E-8989-34F8DE0D5E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE566AEA-3B5F-430E-8989-34F8DE0D5E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE566AEA-3B5F-430E-8989-34F8DE0D5E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE566AEA-3B5F-430E-8989-34F8DE0D5E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7ED0A1-733D-4DB5-8088-97A58D13CBE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7ED0A1-733D-4DB5-8088-97A58D13CBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7ED0A1-733D-4DB5-8088-97A58D13CBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7ED0A1-733D-4DB5-8088-97A58D13CBE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73F3962-3C8D-4FE2-85C9-C83FA5FE17E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73F3962-3C8D-4FE2-85C9-C83FA5FE17E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73F3962-3C8D-4FE2-85C9-C83FA5FE17E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73F3962-3C8D-4FE2-85C9-C83FA5FE17E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE566AEA-3B5F-430E-8989-34F8DE0D5E98} = {70C01A2A-24A7-41AF-AE07-7113941D448B}
+		{D083F3F3-34FB-4846-B718-D03B2C1526A8} = {70C01A2A-24A7-41AF-AE07-7113941D448B}
+		{FA7ED0A1-733D-4DB5-8088-97A58D13CBE0} = {70C01A2A-24A7-41AF-AE07-7113941D448B}
+		{D73F3962-3C8D-4FE2-85C9-C83FA5FE17E9} = {CB0B9FD4-9FC1-4A52-BDC6-207B09F26F8C}
+	EndGlobalSection
+EndGlobal

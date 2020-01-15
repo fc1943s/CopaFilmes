@@ -1,0 +1,23 @@
+# Binaries/Build
+
+obj/
+bin/
+.fake/
+
+
+# Paket dependency manager
+
+.paket/
+paket-files/
+
+
+
+# IDEs
+
+.idea/
+.vs/
+
+
+# Libs
+
+node_modules/

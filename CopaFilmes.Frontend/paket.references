@@ -1,0 +1,7 @@
+group CopaFilmes.Frontend
+
+FSharp.Core
+
+Fable.Remoting.Client
+Fulma
+Fable.Elmish.HMR

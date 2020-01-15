@@ -1,0 +1,46 @@
+version 5.226.0
+
+framework: netcoreapp3.1, netstandard2.0
+
+storage: none
+source https://api.nuget.org/v3/index.json
+
+nuget FSharp.Core
+
+
+
+group CopaFilmes.Backend
+
+storage: none
+source https://api.nuget.org/v3/index.json
+
+nuget Saturn ~> 0.10.1
+nuget Fable.Remoting.Giraffe ~> 3.11.2
+nuget FSharp.Data ~> 3.3.3
+
+
+
+group CopaFilmes.Frontend
+
+storage: none
+source https://api.nuget.org/v3/index.json
+
+clitool dotnet-fable prerelease
+
+nuget Fable.Remoting.Client ~> 5.10.2
+nuget Fulma ~> 2.5.0
+nuget Fable.Elmish.HMR ~> 4.0.1
+  
+  
+  
+group Tests
+
+storage: none
+source https://api.nuget.org/v3/index.json
+
+nuget Microsoft.NET.Test.Sdk ~> 16.4.0
+nuget xunit.runner.visualstudio ~> 2.2
+nuget FsUnit.xUnit ~> 3.8.0
+
+
+
