@@ -37,9 +37,10 @@ type State =
     { Filmes: Model.Filme list
       Podio: Model.Filme list
       Error: string }
-    static member Default = { Filmes = []
-                              Podio = []
-                              Error = "" }
+    static member inline Default =
+        { Filmes = []
+          Podio = []
+          Error = "" }
     
 type Props =
     { State: State
@@ -98,17 +99,16 @@ let update (msg: Message) (state: State) =
     
 let lazyView props =
     
-    let events =
-        {|
-            OnFilmesSelected = fun (filmes: Model.Filme list) ->
-                props.Dispatch (DisputarCampeonato filmes)
-                
-            OnPodioVoltar = fun _ ->
-                props.Dispatch PodioVoltar
-                
-            OnErrorClose = fun _ ->
-                Dom.window.location.href <- Dom.window.location.href
-        |}
+    let events = {|
+        OnFilmesSelected = fun (filmes: Model.Filme list) ->
+            props.Dispatch (DisputarCampeonato filmes)
+            
+        OnPodioVoltar = fun _ ->
+            props.Dispatch PodioVoltar
+            
+        OnErrorClose = fun _ ->
+            Dom.window.location.href <- Dom.window.location.href
+    |}
     
     Container.container [ Container.IsFluid ][
        

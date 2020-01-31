@@ -9,11 +9,10 @@ open CopaFilmes.Shared
 
 let ``default`` = FunctionComponent.Of (fun (props: {| Filmes: Model.Filme list
                                                        OnVoltar: unit -> unit |}) ->
-    let events =
-        {|
-            OnVoltarClick = fun _ ->
-                props.OnVoltar ()
-        |}
+    let events = {|
+        OnVoltarClick = fun _ ->
+            props.OnVoltar ()
+    |}
     
     div [ Class "page-podio" ][
         
@@ -41,4 +40,4 @@ let ``default`` = FunctionComponent.Of (fun (props: {| Filmes: Model.Filme list
             str "< Voltar"
         ]
     ]
-)
+, memoizeWith = equalsButFunctions)

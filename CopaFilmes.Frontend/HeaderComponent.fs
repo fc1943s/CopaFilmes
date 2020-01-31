@@ -22,4 +22,4 @@ let ``default`` = FunctionComponent.Of (fun (props: {| PageTitle: string
             str props.PageDescription
         ]
     ]
-)
+, memoizeWith = equalsButFunctions)

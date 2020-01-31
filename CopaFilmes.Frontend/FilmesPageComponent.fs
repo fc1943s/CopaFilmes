@@ -26,7 +26,7 @@ let filmeItemComponent = FunctionComponent.Of (fun (props: {| Filme: Model.Filme
             ]
         ]
     ]
-)
+, memoizeWith = equalsButFunctions)
 
 
 let ``default`` = FunctionComponent.Of (fun (props: {| Filmes: Model.Filme list
@@ -36,24 +36,23 @@ let ``default`` = FunctionComponent.Of (fun (props: {| Filmes: Model.Filme list
     
     let selected =
         state.current.SelectedList
-        |> Seq.map (fun x -> x.Value)
+        |> Seq.map (fun (KeyValue (_, v)) -> v)
         |> Seq.toList
         
     let selectedCount = Map.count state.current.SelectedList
         
-    let events =
-        {|
-            OnFilmeCheck = fun (filme: Model.Filme) (checked': bool) ->
-                let swap =
-                    if checked'
-                    then Map.add filme.Id filme
-                    else Map.remove filme.Id
-                
-                state.update (fun state -> {| state with SelectedList = state.SelectedList |> swap |} )
-                
-            OnGerarCampeonatoClick = fun _ ->
-                props.OnSelected selected
-        |}
+    let events = {|
+        OnFilmeCheck = fun (filme: Model.Filme) (checked': bool) ->
+            let swap =
+                if checked'
+                then Map.add filme.Id filme
+                else Map.remove filme.Id
+            
+            state.update (fun state -> {| state with SelectedList = state.SelectedList |> swap |} )
+            
+        OnGerarCampeonatoClick = fun _ ->
+            props.OnSelected selected
+    |}
     
         
     
@@ -99,4 +98,4 @@ let ``default`` = FunctionComponent.Of (fun (props: {| Filmes: Model.Filme list
             |> ofList
         ]
     ]
-)
+, memoizeWith = equalsButFunctions)
